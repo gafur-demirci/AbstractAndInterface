@@ -11,14 +11,8 @@ namespace AbstractAndInterfaceDemo.Adapters
 {
     public class MernisServiceAdapter : MernisServiceAdapterBase, ICustomerCheckService
     {
-        public new bool CheckIfRealPerson(Customer customer)
-        {
-            throw new NotImplementedException();
-        }
+        public new bool CheckIfRealPerson(Customer customer) => throw new NotImplementedException();
 
-        public void Save(Customer customer)
-        {
-            throw new NotImplementedException();
-        }
+        public void Save(Customer customer) => throw new NotImplementedException();
     }
 }
