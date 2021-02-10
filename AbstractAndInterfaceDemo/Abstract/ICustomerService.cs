@@ -7,7 +7,7 @@ using AbstractAndInterfaceDemo.Entities;
 
 namespace AbstractAndInterfaceDemo.Abstract
 {
-    public interface ICustomerCheckService
+    public partial interface ICustomerCheckService
     {
         void Save(Customer customer);
     }

@@ -10,11 +10,11 @@ using MernisServiceReference;
 namespace AbstractAndInterfaceDemo.Adapters
 {
     public class MernisServiceAdapter : ICustomerCheckService
-    {
-        public bool CheckIfRealPerson(Customer customer)
+    { 
+        public async bool CheckIfRealPerson(Customer customer)
         {
             MernisServiceReference.KPSPublicSoapClient client = new MernisServiceReference.KPSPublicSoapClient();
-            return client.TCKimlikNoDogrulaAsync(Convert.ToInt64(customer.NationalityId), customer.FirstName.ToUpper(), customer.LastName.ToUpper(), customer.DateOfBirth.Year);
+            return await client.TCKimlikNoDogrulaAsync(TCKimlikNo: Convert.ToInt64(customer.NationalityId), customer.FirstName.ToUpper(), customer.LastName.ToUpper(), customer.DateOfBirth.Year);
         }
 
         public void Save(Customer customer)

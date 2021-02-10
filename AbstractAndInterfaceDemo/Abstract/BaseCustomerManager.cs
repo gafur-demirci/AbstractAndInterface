@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Linq;
 using System.Text;
 using AbstractAndInterfaceDemo.Entities;
+using MernisServiceReference;
 
 namespace AbstractAndInterfaceDemo.Abstract
 {

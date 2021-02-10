@@ -3,10 +3,11 @@ using System.Threading.Tasks;
 using System.Linq;
 using System;
 using AbstractAndInterfaceDemo.Entities;
+using MernisServiceReference;
 
 namespace AbstractAndInterfaceDemo.Abstract
 {
-    public interface ICustomerCheckService
+    public partial interface ICustomerCheckService
     {
         bool CheckIfRealPerson(Customer customer);
         
