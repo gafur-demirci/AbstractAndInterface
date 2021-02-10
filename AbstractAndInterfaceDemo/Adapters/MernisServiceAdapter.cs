@@ -9,12 +9,11 @@ using MernisServiceReference;
 
 namespace AbstractAndInterfaceDemo.Adapters
 {
-    public class MernisServiceAdapter : ICustomerCheckService
-    { 
-        public async bool CheckIfRealPerson(Customer customer)
+    public class MernisServiceAdapter : MernisServiceAdapterBase, ICustomerCheckService
+    {
+        public new bool CheckIfRealPerson(Customer customer)
         {
-            MernisServiceReference.KPSPublicSoapClient client = new MernisServiceReference.KPSPublicSoapClient();
-            return await client.TCKimlikNoDogrulaAsync(TCKimlikNo: Convert.ToInt64(customer.NationalityId), customer.FirstName.ToUpper(), customer.LastName.ToUpper(), customer.DateOfBirth.Year);
+            throw new NotImplementedException();
         }
 
         public void Save(Customer customer)
